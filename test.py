@@ -7,8 +7,10 @@ import time
 import json
 
 from tqdm import tqdm
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
+
+from seleniumwire import webdriver
+from seleniumwire.utils import decode
+
 
 BASE_URL = "https://food.grab.com/ph/en/"
 BINARY_LOCATION = "./chromedriver"
@@ -26,7 +28,9 @@ progress_bar = tqdm()
 
 
 def input_search_location_and_proceed(driver: webdriver.Chrome):
-    """ """
+    """
+    Input search query and click on a list option
+    """
     clicked = False
     driver.find_element_by_id("location-input").send_keys(
         "Manila City Hall - 369 Antonio Villegas St., Ermita, Manila, Metro Manila, NCR, 1000, Philippines"
@@ -49,7 +53,9 @@ def input_search_location_and_proceed(driver: webdriver.Chrome):
 
 
 def scroll_to_end(driver: webdriver.Chrome) -> None:
-    """ """
+    """
+    Scroll to the end of page
+    """
     progress_bar.set_description("Scrolling to the load more button")
     total_height = int(driver.execute_script("return document.body.scrollHeight"))
 
@@ -61,12 +67,15 @@ def filter_restro_result(
     result: dict,
     required_keys: list = ["id", "listing_type", "name", "latitude", "longitude"],
 ) -> dict:
+    """
+    Filter and Save specific keys from result dict
+    """
     result = {key: value for key, value in result.items() if key in required_keys}
     return result
 
 
 # TODO: Convert exceptions into something good
-def get_data_props(driver: webdriver.Chrome) -> list:
+def get_ssr_props(driver: webdriver.Chrome) -> list:
     """
     Grabs the Server Side Rending props for listings currently in the viewport
     """
@@ -81,23 +90,28 @@ def get_data_props(driver: webdriver.Chrome) -> list:
 
     _popular_restros = script_inner_html_parsed["props"]["initialReduxState"][
         "pageRestaurantsV2"
-    ]["entities"]["recommendedMerchants"]
+    ]["entities"].get("recommendedMerchants", {})
     _avail_restros = script_inner_html_parsed["props"]["initialReduxState"][
         "pageRestaurantsV2"
-    ]["entities"]["restaurantList"]
+    ]["entities"].get("restaurantList", {})
 
     for _, item in _popular_restros.items():
-        item["listing_type"] = "recommendedMerchants"
+        # item["listing_type"] = "recommendedMerchants"
         papa_json.append(filter_restro_result(item))
 
     for _, item in _avail_restros.items():
-        item["listing_type"] = "restaurantList"
+        # item["listing_type"] = "restaurantList"
         papa_json.append(filter_restro_result(item))
 
 
 def load_more_button_present(driver: webdriver.Chrome) -> bool:
-    """ """
-    temp_button = driver.find_element_by_class_name("ant-btn-block")
+    """
+    Check if load more button is present and scroll+click it if present
+    """
+    try:
+        temp_button = driver.find_element_by_class_name("ant-btn-block")
+    except Exception as e:
+        raise Exception("Failed to find 'Load More' Button, possibly timed out.")
     # cross check if correct button
     if not temp_button.text == "Load More":
         return False
@@ -116,6 +130,9 @@ def load_more_button_present(driver: webdriver.Chrome) -> bool:
 
 
 def synthetic_wait():
+    """
+    Wait before fetching for more search data
+    """
     per_page_wait = 5
     for total_tick in range(per_page_wait + 1):
         time_tick = 1
@@ -123,16 +140,44 @@ def synthetic_wait():
         time.sleep(time_tick)
 
 
+def intercept_search_results(driver: webdriver.Chrome):
+    """
+    Grab response data from /search api calls
+    """
+    for request in driver.requests:
+        if (
+            request.response
+            and "https://portal.grab.com/foodweb/v2/search" == request.url
+        ):
+            response_body = json.loads(
+                decode(
+                    request.response.body,
+                    request.response.headers.get("Content-Encoding", "identity"),
+                )
+            )
+
+            things = [
+                filter_restro_result(
+                    res,
+                    required_keys=["id", "address", "latlng"],
+                )
+                for res in response_body["searchResult"]["searchMerchants"]
+            ]
+            papa_json.extend(things)
+
+
 try:
     driver = webdriver.Chrome(BINARY_LOCATION)
     driver.get(BASE_URL)
     input_search_location_and_proceed(driver)
+    scroll_to_end(driver)
+    get_ssr_props(driver)
     while True:
         progress_bar.update(1)
         synthetic_wait()
 
         scroll_to_end(driver)
-        get_data_props(driver)
+        intercept_search_results(driver)
         with open("current_buffer.json", "w") as json_buffer:
             json.dump(papa_json, json_buffer)
             progress_bar.set_description(
@@ -146,4 +191,6 @@ except Exception as e:
     if "403 ERROR" in driver.page_source:
         print("Cloudfront Ratelimited. Exiting now...")
         sys.exit(0)
-    print("We had this exception: ", e)
+    print(
+        "Failed while scrapping elements due to element not being present. Exiting since Page failed to load."
+    )

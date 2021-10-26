@@ -1,1 +1,1 @@
-To avoid the video being too long, I will cut the stream here and add the results to a github repo.
+As this keeps on going for long. I will cut the video here.
