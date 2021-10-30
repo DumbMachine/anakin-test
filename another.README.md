@@ -49,84 +49,52 @@ Deliverables:
 2. Example showcasing the usage for the above with many variables
 
 ## Request Showcase:
-<sub><sup>Responses have been cross-checked with data from the app</sup></sub>
-
+# A collapsible section with markdown
 
 <details>
-	<summary>Fetching results for Restro near <b>Burj Khalifa 🏛</b></summary>
-Request:
-	<br>
-<code>
- curl --header "Accept: application/json" --compressed --header "Accept-Language: en;q=1.0,en;q=0.9" --header "Agent: ICMA" --header "Application: careemfood-mobile-v1" --header "Authorization: Bearer eyJraWQiOiIwMTkyZTM5ZC1kZTgwLTQyZTEtYTdiYS00MDBkYzgwMTk5ODQiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1MzE5NDYzNCIsImF1ZCI6ImNvbS5jYXJlZW0uaW50ZXJuYWwiLCJhY2Nlc3NfdHlwZSI6IkNVU1RPTUVSIiwidXNlcl9pZCI6NTMxOTQ2MzQsImF6cCI6IjI4MWYwY2JhLWI1MGMtNDZjZC04ZGUwLWUzNTVkZWMwODk3Yi5pY21hLmNhcmVlbS5jb20iLCJzY29wZSI6InN1YnNjcmlwdGlvbnMgYWRkcmVzcyB3YWxsZXQgb3BlbmlkIHhjbWEgcHJvZmlsZSBwYXltZW50cyBhdXRoX3YxX3Rva2VuIGRlbGl2ZXJpZXMgcGhvbmUgb2ZmbGluZV9hY2Nlc3MgbG9jYXRpb25zIGJvb2tpbmdzIGVtYWlsIiwiaXNzIjoiaHR0cHM6XC9cL2lkZW50aXR5LmNhcmVlbS5jb21cLyIsImV4cCI6MTYzNTY1NDEwNCwiaWF0IjoxNjM1NTY3NzA0LCJqdGkiOiJiNTA4MDQ5MS0zNmMwLTQyNGItOGU5MC1lYjY3ZTgxMWVlMjMifQ.LMgdDO3mvAWSCuqqJLE6JLnIv7QtXkqEkfnSFI0zYv8OD3wDlLypCZPhA321zB03PkLbYew1kKZZXZq5fo0qRYuZNQfo6Ooac_h5LhGM2LT8PH9vGGPk7Iyv45zXYb9b2xSCdUF9C3G1om71jL6bUjvAYE1INqvnsofG0UcapBi3cJbZUyMDWRRxk459cXEBeF7aZkvYcsZMFe9j_aIuLL_zjCid68OV8TSfPyE-lVRLZx9FIeIgOACXqdXI4qF2pYalt2zokqWKOKaGcALxHptozys6qoqxgO2kFr9Qv4ixNDNG8K0BvotA3oF5uIk-Hc3kB9kw7tmh2ezEWdnMig" --header "City-Id: 1" --header "Device: FF46DFC1-6498-40AE-8663-AB810CC52910" --header "Lat: 25.275897979736328" --header "Lng: 55.330440521240234" --header "Meta: ios;production;14.31.0 (1);15.1;iPhone14,2" --header "Time-Zone: Asia/Dubai" --user-agent "ICMA/11.42.1" --header "Uuid: 08D6B5B6-DE91-40EB-8164-EF905428F061" --header "Version: 11.42.1" --header "X-Careem-Agent: ICMA" --header "X-Careem-Beta: false" --header "X-Careem-Version: 11.42.1" --header "X-Careemdomain: food" --header "X-request-Source: SUPERAPP" "https://apigateway.careemdash.com//v2/discover?reorder_variant=recommended&include_offers=1" 
-<code/>
-	
-Response:
-<br>
-<p>
-<a href="https://github.com/DumbMachine/anakin-test/blob/master/get.1.bj.json">Click here to see response</a>
-	</p>
+    <summary>Fetching results for Restro near <b>Burj Khalifa 🏛</b></summary>
 
+Request:
+```bash
+curl --header "Accept: application/json" --compressed --header "Accept-Language: en;q=1.0,en;q=0.9" --header "Agent: ICMA" --header "Application: careemfood-mobile-v1" --header "Authorization: Bearer eyJraWQiOiIwMTkyZTM5ZC1kZTgwLTQyZTEtYTdiYS00MDBkYzgwMTk5ODQiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1MzE5NDYzNCIsImF1ZCI6ImNvbS5jYXJlZW0uaW50ZXJuYWwiLCJhY2Nlc3NfdHlwZSI6IkNVU1RPTUVSIiwidXNlcl9pZCI6NTMxOTQ2MzQsImF6cCI6IjI4MWYwY2JhLWI1MGMtNDZjZC04ZGUwLWUzNTVkZWMwODk3Yi5pY21hLmNhcmVlbS5jb20iLCJzY29wZSI6InN1YnNjcmlwdGlvbnMgYWRkcmVzcyB3YWxsZXQgb3BlbmlkIHhjbWEgcHJvZmlsZSBwYXltZW50cyBhdXRoX3YxX3Rva2VuIGRlbGl2ZXJpZXMgcGhvbmUgb2ZmbGluZV9hY2Nlc3MgbG9jYXRpb25zIGJvb2tpbmdzIGVtYWlsIiwiaXNzIjoiaHR0cHM6XC9cL2lkZW50aXR5LmNhcmVlbS5jb21cLyIsImV4cCI6MTYzNTY1NDEwNCwiaWF0IjoxNjM1NTY3NzA0LCJqdGkiOiJiNTA4MDQ5MS0zNmMwLTQyNGItOGU5MC1lYjY3ZTgxMWVlMjMifQ.LMgdDO3mvAWSCuqqJLE6JLnIv7QtXkqEkfnSFI0zYv8OD3wDlLypCZPhA321zB03PkLbYew1kKZZXZq5fo0qRYuZNQfo6Ooac_h5LhGM2LT8PH9vGGPk7Iyv45zXYb9b2xSCdUF9C3G1om71jL6bUjvAYE1INqvnsofG0UcapBi3cJbZUyMDWRRxk459cXEBeF7aZkvYcsZMFe9j_aIuLL_zjCid68OV8TSfPyE-lVRLZx9FIeIgOACXqdXI4qF2pYalt2zokqWKOKaGcALxHptozys6qoqxgO2kFr9Qv4ixNDNG8K0BvotA3oF5uIk-Hc3kB9kw7tmh2ezEWdnMig" --header "City-Id: 1" --header "Device: FF46DFC1-6498-40AE-8663-AB810CC52910" --header "Lat: 25.275897979736328" --header "Lng: 55.330440521240234" --header "Meta: ios;production;14.31.0 (1);15.1;iPhone14,2" --header "Time-Zone: Asia/Dubai" --user-agent "ICMA/11.42.1" --header "Uuid: 08D6B5B6-DE91-40EB-8164-EF905428F061" --header "Version: 11.42.1" --header "X-Careem-Agent: ICMA" --header "X-Careem-Beta: false" --header "X-Careem-Version: 11.42.1" --header "X-Careemdomain: food" --header "X-request-Source: SUPERAPP" "https://apigateway.careemdash.com//v2/discover?reorder_variant=recommended"
+```
+  ## Response
+  [Click here to see response](https://github.com/DumbMachine/anakin-test/blob/master/get.1.bj.json)
 </details>
-	
-	
 
 <details>
 	<summary>Fetching results for Restro near <b>Al Deira 🎆 </b></summary>
+	
 Request:
-	<br>
-<code>
- curl --header "Accept: application/json" --compressed --header "Accept-Language: en;q=1.0,en;q=0.9" --header "Agent: ICMA" --header "Application: careemfood-mobile-v1" --header "Authorization: Bearer eyJraWQiOiIwMTkyZTM5ZC1kZTgwLTQyZTEtYTdiYS00MDBkYzgwMTk5ODQiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1MzE5NDYzNCIsImF1ZCI6ImNvbS5jYXJlZW0uaW50ZXJuYWwiLCJhY2Nlc3NfdHlwZSI6IkNVU1RPTUVSIiwidXNlcl9pZCI6NTMxOTQ2MzQsImF6cCI6IjI4MWYwY2JhLWI1MGMtNDZjZC04ZGUwLWUzNTVkZWMwODk3Yi5pY21hLmNhcmVlbS5jb20iLCJzY29wZSI6InN1YnNjcmlwdGlvbnMgYWRkcmVzcyB3YWxsZXQgb3BlbmlkIHhjbWEgcHJvZmlsZSBwYXltZW50cyBhdXRoX3YxX3Rva2VuIGRlbGl2ZXJpZXMgcGhvbmUgb2ZmbGluZV9hY2Nlc3MgbG9jYXRpb25zIGJvb2tpbmdzIGVtYWlsIiwiaXNzIjoiaHR0cHM6XC9cL2lkZW50aXR5LmNhcmVlbS5jb21cLyIsImV4cCI6MTYzNTY1NDEwNCwiaWF0IjoxNjM1NTY3NzA0LCJqdGkiOiJiNTA4MDQ5MS0zNmMwLTQyNGItOGU5MC1lYjY3ZTgxMWVlMjMifQ.LMgdDO3mvAWSCuqqJLE6JLnIv7QtXkqEkfnSFI0zYv8OD3wDlLypCZPhA321zB03PkLbYew1kKZZXZq5fo0qRYuZNQfo6Ooac_h5LhGM2LT8PH9vGGPk7Iyv45zXYb9b2xSCdUF9C3G1om71jL6bUjvAYE1INqvnsofG0UcapBi3cJbZUyMDWRRxk459cXEBeF7aZkvYcsZMFe9j_aIuLL_zjCid68OV8TSfPyE-lVRLZx9FIeIgOACXqdXI4qF2pYalt2zokqWKOKaGcALxHptozys6qoqxgO2kFr9Qv4ixNDNG8K0BvotA3oF5uIk-Hc3kB9kw7tmh2ezEWdnMig" --header "City-Id: 1" --header "Device: FF46DFC1-6498-40AE-8663-AB810CC52910" --header "Lat: 25.270525" --header "Lng: 55.330440521240234" --header "Meta: ios;production;14.31.0 (1);15.1;iPhone14,2" --header "Time-Zone: Asia/Dubai" --user-agent "ICMA/11.42.1" --header "Uuid: 08D6B5B6-DE91-40EB-8164-EF905428F061" --header "Version: 11.42.1" --header "X-Careem-Agent: ICMA" --header "X-Careem-Beta: false" --header "X-Careem-Version: 11.42.1" --header "X-Careemdomain: food" --header "X-request-Source: SUPERAPP" "https://apigateway.careemdash.com//v2/discover?reorder_variant=recommended&include_offers=1" 
-<code/>
-	
-Response:
-<br>
-<p>
-<a href="https://github.com/DumbMachine/anakin-test/blob/master/get.ald.json">Click here to see response</a>
-	</p>
-
+```bash
+curl --header "Accept: application/json" --compressed --header "Accept-Language: en;q=1.0,en;q=0.9" --header "Agent: ICMA" --header "Application: careemfood-mobile-v1" --header "Authorization: Bearer eyJraWQiOiIwMTkyZTM5ZC1kZTgwLTQyZTEtYTdiYS00MDBkYzgwMTk5ODQiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1MzE5NDYzNCIsImF1ZCI6ImNvbS5jYXJlZW0uaW50ZXJuYWwiLCJhY2Nlc3NfdHlwZSI6IkNVU1RPTUVSIiwidXNlcl9pZCI6NTMxOTQ2MzQsImF6cCI6IjI4MWYwY2JhLWI1MGMtNDZjZC04ZGUwLWUzNTVkZWMwODk3Yi5pY21hLmNhcmVlbS5jb20iLCJzY29wZSI6InN1YnNjcmlwdGlvbnMgYWRkcmVzcyB3YWxsZXQgb3BlbmlkIHhjbWEgcHJvZmlsZSBwYXltZW50cyBhdXRoX3YxX3Rva2VuIGRlbGl2ZXJpZXMgcGhvbmUgb2ZmbGluZV9hY2Nlc3MgbG9jYXRpb25zIGJvb2tpbmdzIGVtYWlsIiwiaXNzIjoiaHR0cHM6XC9cL2lkZW50aXR5LmNhcmVlbS5jb21cLyIsImV4cCI6MTYzNTY1NDEwNCwiaWF0IjoxNjM1NTY3NzA0LCJqdGkiOiJiNTA4MDQ5MS0zNmMwLTQyNGItOGU5MC1lYjY3ZTgxMWVlMjMifQ.LMgdDO3mvAWSCuqqJLE6JLnIv7QtXkqEkfnSFI0zYv8OD3wDlLypCZPhA321zB03PkLbYew1kKZZXZq5fo0qRYuZNQfo6Ooac_h5LhGM2LT8PH9vGGPk7Iyv45zXYb9b2xSCdUF9C3G1om71jL6bUjvAYE1INqvnsofG0UcapBi3cJbZUyMDWRRxk459cXEBeF7aZkvYcsZMFe9j_aIuLL_zjCid68OV8TSfPyE-lVRLZx9FIeIgOACXqdXI4qF2pYalt2zokqWKOKaGcALxHptozys6qoqxgO2kFr9Qv4ixNDNG8K0BvotA3oF5uIk-Hc3kB9kw7tmh2ezEWdnMig" --header "City-Id: 1" --header "Device: FF46DFC1-6498-40AE-8663-AB810CC52910" --header "Lat: 25.270525" --header "Lng: 55.330440521240234" --header "Meta: ios;production;14.31.0 (1);15.1;iPhone14,2" --header "Time-Zone: Asia/Dubai" --user-agent "ICMA/11.42.1" --header "Uuid: 08D6B5B6-DE91-40EB-8164-EF905428F061" --header "Version: 11.42.1" --header "X-Careem-Agent: ICMA" --header "X-Careem-Beta: false" --header "X-Careem-Version: 11.42.1" --header "X-Careemdomain: food" --header "X-request-Source: SUPERAPP" "https://apigateway.careemdash.com//v2/discover?reorder_variant=recommended" 
+```
+  ## Response
+  [Click here to see response](https://github.com/DumbMachine/anakin-test/blob/master/get.ald.json)
 </details>
-	
-	
+
 <details>
 	<summary>Fetching results for Menu Item for <b>Man'oushe Street 👳</b></summary>
-Image:
-	<br>
-	<img src="https://user-images.githubusercontent.com/23381512/139527853-08f2632a-0309-46dd-a641-7f154d8c3bd8.png">
-	<br>
-	Request:
-	<br>
-<code>
-curl --header "accept: application/json" --compressed --header "accept-language: en;q=1.0,en;q=0.9" --header "agent: ICMA" --header "application: careemfood-mobile-v1" --header "authorization: Bearer eyJraWQiOiIwMTkyZTM5ZC1kZTgwLTQyZTEtYTdiYS00MDBkYzgwMTk5ODQiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1MzE5NDYzNCIsImF1ZCI6ImNvbS5jYXJlZW0uaW50ZXJuYWwiLCJhY2Nlc3NfdHlwZSI6IkNVU1RPTUVSIiwidXNlcl9pZCI6NTMxOTQ2MzQsImF6cCI6IjI4MWYwY2JhLWI1MGMtNDZjZC04ZGUwLWUzNTVkZWMwODk3Yi5pY21hLmNhcmVlbS5jb20iLCJzY29wZSI6InN1YnNjcmlwdGlvbnMgYWRkcmVzcyB3YWxsZXQgb3BlbmlkIHhjbWEgcHJvZmlsZSBwYXltZW50cyBhdXRoX3YxX3Rva2VuIGRlbGl2ZXJpZXMgcGhvbmUgb2ZmbGluZV9hY2Nlc3MgbG9jYXRpb25zIGJvb2tpbmdzIGVtYWlsIiwiaXNzIjoiaHR0cHM6XC9cL2lkZW50aXR5LmNhcmVlbS5jb21cLyIsImV4cCI6MTYzNTY1NDEwNCwiaWF0IjoxNjM1NTY3NzA0LCJqdGkiOiJiNTA4MDQ5MS0zNmMwLTQyNGItOGU5MC1lYjY3ZTgxMWVlMjMifQ.LMgdDO3mvAWSCuqqJLE6JLnIv7QtXkqEkfnSFI0zYv8OD3wDlLypCZPhA321zB03PkLbYew1kKZZXZq5fo0qRYuZNQfo6Ooac_h5LhGM2LT8PH9vGGPk7Iyv45zXYb9b2xSCdUF9C3G1om71jL6bUjvAYE1INqvnsofG0UcapBi3cJbZUyMDWRRxk459cXEBeF7aZkvYcsZMFe9j_aIuLL_zjCid68OV8TSfPyE-lVRLZx9FIeIgOACXqdXI4qF2pYalt2zokqWKOKaGcALxHptozys6qoqxgO2kFr9Qv4ixNDNG8K0BvotA3oF5uIk-Hc3kB9kw7tmh2ezEWdnMig" --header "city-id: 1" --header "device: FF46DFC1-6498-40AE-8663-AB810CC52910" --header "lat: 25.196929931640625" --header "lng: 55.274391174316406" --header "meta: ios;production;14.31.0 (1);15.1;iPhone14,2" --header "time-zone: Asia/Dubai" --user-agent "ICMA/11.42.1" --header "uuid: 08D6B5B6-DE91-40EB-8164-EF905428F061" --header "version: 11.42.1" --header "x-careem-agent: ICMA" --header "x-careem-beta: false" --header "x-careem-version: 11.42.1" --header "x-careemdomain: food" --header "x-request-source: SUPERAPP" "https://apigateway.careemdash.com//v1/restaurants/897330?offers_category=0" 
-<code/>
 	
-Response:
-<br>
-<p>
-<a href="https://github.com/DumbMachine/anakin-test/blob/master/menu.1.json">Click here to see response</a>
-	</p>
+<img src="https://user-images.githubusercontent.com/23381512/139527853-08f2632a-0309-46dd-a641-7f154d8c3bd8.png">
 
+Request:
+```bash
+curl --header "accept: application/json" --compressed --header "accept-language: en;q=1.0,en;q=0.9" --header "agent: ICMA" --header "application: careemfood-mobile-v1" --header "authorization: Bearer eyJraWQiOiIwMTkyZTM5ZC1kZTgwLTQyZTEtYTdiYS00MDBkYzgwMTk5ODQiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1MzE5NDYzNCIsImF1ZCI6ImNvbS5jYXJlZW0uaW50ZXJuYWwiLCJhY2Nlc3NfdHlwZSI6IkNVU1RPTUVSIiwidXNlcl9pZCI6NTMxOTQ2MzQsImF6cCI6IjI4MWYwY2JhLWI1MGMtNDZjZC04ZGUwLWUzNTVkZWMwODk3Yi5pY21hLmNhcmVlbS5jb20iLCJzY29wZSI6InN1YnNjcmlwdGlvbnMgYWRkcmVzcyB3YWxsZXQgb3BlbmlkIHhjbWEgcHJvZmlsZSBwYXltZW50cyBhdXRoX3YxX3Rva2VuIGRlbGl2ZXJpZXMgcGhvbmUgb2ZmbGluZV9hY2Nlc3MgbG9jYXRpb25zIGJvb2tpbmdzIGVtYWlsIiwiaXNzIjoiaHR0cHM6XC9cL2lkZW50aXR5LmNhcmVlbS5jb21cLyIsImV4cCI6MTYzNTY1NDEwNCwiaWF0IjoxNjM1NTY3NzA0LCJqdGkiOiJiNTA4MDQ5MS0zNmMwLTQyNGItOGU5MC1lYjY3ZTgxMWVlMjMifQ.LMgdDO3mvAWSCuqqJLE6JLnIv7QtXkqEkfnSFI0zYv8OD3wDlLypCZPhA321zB03PkLbYew1kKZZXZq5fo0qRYuZNQfo6Ooac_h5LhGM2LT8PH9vGGPk7Iyv45zXYb9b2xSCdUF9C3G1om71jL6bUjvAYE1INqvnsofG0UcapBi3cJbZUyMDWRRxk459cXEBeF7aZkvYcsZMFe9j_aIuLL_zjCid68OV8TSfPyE-lVRLZx9FIeIgOACXqdXI4qF2pYalt2zokqWKOKaGcALxHptozys6qoqxgO2kFr9Qv4ixNDNG8K0BvotA3oF5uIk-Hc3kB9kw7tmh2ezEWdnMig" --header "city-id: 1" --header "device: FF46DFC1-6498-40AE-8663-AB810CC52910" --header "lat: 25.196929931640625" --header "lng: 55.274391174316406" --header "meta: ios;production;14.31.0 (1);15.1;iPhone14,2" --header "time-zone: Asia/Dubai" --user-agent "ICMA/11.42.1" --header "uuid: 08D6B5B6-DE91-40EB-8164-EF905428F061" --header "version: 11.42.1" --header "x-careem-agent: ICMA" --header "x-careem-beta: false" --header "x-careem-version: 11.42.1" --header "x-careemdomain: food" --header "x-request-source: SUPERAPP" "https://apigateway.careemdash.com//v1/restaurants/897330?offers_category=0" 
+```
+  ## Response
+  [Click here to see response](https://github.com/DumbMachine/anakin-test/blob/master/menu.1.json)
 </details>
-	
-	
-	
-		
+
 <details>
 	<summary>Fetching results for Menu Item for <b>Shake Shack🍔</b></summary>
-Image:
-	<br>
-	<img src="https://user-images.githubusercontent.com/23381512/139527848-1d41bd48-cf18-4b0f-b4de-f7cd0af78f01.png">
-	<br>
-	Request:
-	<br>
-<code>
-curl --header "accept: application/json" --compressed --header "accept-language: en;q=1.0,en;q=0.9" --header "agent: ICMA" --header "application: careemfood-mobile-v1" --header "authorization: Bearer eyJraWQiOiIwMTkyZTM5ZC1kZTgwLTQyZTEtYTdiYS00MDBkYzgwMTk5ODQiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1MzE5NDYzNCIsImF1ZCI6ImNvbS5jYXJlZW0uaW50ZXJuYWwiLCJhY2Nlc3NfdHlwZSI6IkNVU1RPTUVSIiwidXNlcl9pZCI6NTMxOTQ2MzQsImF6cCI6IjI4MWYwY2JhLWI1MGMtNDZjZC04ZGUwLWUzNTVkZWMwODk3Yi5pY21hLmNhcmVlbS5jb20iLCJzY29wZSI6InN1YnNjcmlwdGlvbnMgYWRkcmVzcyB3YWxsZXQgb3BlbmlkIHhjbWEgcHJvZmlsZSBwYXltZW50cyBhdXRoX3YxX3Rva2VuIGRlbGl2ZXJpZXMgcGhvbmUgb2ZmbGluZV9hY2Nlc3MgbG9jYXRpb25zIGJvb2tpbmdzIGVtYWlsIiwiaXNzIjoiaHR0cHM6XC9cL2lkZW50aXR5LmNhcmVlbS5jb21cLyIsImV4cCI6MTYzNTY1NDEwNCwiaWF0IjoxNjM1NTY3NzA0LCJqdGkiOiJiNTA4MDQ5MS0zNmMwLTQyNGItOGU5MC1lYjY3ZTgxMWVlMjMifQ.LMgdDO3mvAWSCuqqJLE6JLnIv7QtXkqEkfnSFI0zYv8OD3wDlLypCZPhA321zB03PkLbYew1kKZZXZq5fo0qRYuZNQfo6Ooac_h5LhGM2LT8PH9vGGPk7Iyv45zXYb9b2xSCdUF9C3G1om71jL6bUjvAYE1INqvnsofG0UcapBi3cJbZUyMDWRRxk459cXEBeF7aZkvYcsZMFe9j_aIuLL_zjCid68OV8TSfPyE-lVRLZx9FIeIgOACXqdXI4qF2pYalt2zokqWKOKaGcALxHptozys6qoqxgO2kFr9Qv4ixNDNG8K0BvotA3oF5uIk-Hc3kB9kw7tmh2ezEWdnMig" --header "city-id: 1" --header "device: FF46DFC1-6498-40AE-8663-AB810CC52910" --header "lat: 25.196929931640625" --header "lng: 55.274391174316406" --header "meta: ios;production;14.31.0 (1);15.1;iPhone14,2" --header "time-zone: Asia/Dubai" --user-agent "ICMA/11.42.1" --header "uuid: 08D6B5B6-DE91-40EB-8164-EF905428F061" --header "version: 11.42.1" --header "x-careem-agent: ICMA" --header "x-careem-beta: false" --header "x-careem-version: 11.42.1" --header "x-careemdomain: food" --header "x-request-source: SUPERAPP" "https://apigateway.careemdash.com//v1/restaurants/2828?offers_category=0" 
-<code/>
-	
-Response:
-<br>
-<p>
-<a href="https://github.com/DumbMachine/anakin-test/blob/master/menu.2.json">Click here to see response</a>
-	</p>
 
-</details>
+<img src="https://user-images.githubusercontent.com/23381512/139527848-1d41bd48-cf18-4b0f-b4de-f7cd0af78f01.png">
 	
+Request:
+```bash
+curl --header "accept: application/json" --compressed --header "accept-language: en;q=1.0,en;q=0.9" --header "agent: ICMA" --header "application: careemfood-mobile-v1" --header "authorization: Bearer eyJraWQiOiIwMTkyZTM5ZC1kZTgwLTQyZTEtYTdiYS00MDBkYzgwMTk5ODQiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1MzE5NDYzNCIsImF1ZCI6ImNvbS5jYXJlZW0uaW50ZXJuYWwiLCJhY2Nlc3NfdHlwZSI6IkNVU1RPTUVSIiwidXNlcl9pZCI6NTMxOTQ2MzQsImF6cCI6IjI4MWYwY2JhLWI1MGMtNDZjZC04ZGUwLWUzNTVkZWMwODk3Yi5pY21hLmNhcmVlbS5jb20iLCJzY29wZSI6InN1YnNjcmlwdGlvbnMgYWRkcmVzcyB3YWxsZXQgb3BlbmlkIHhjbWEgcHJvZmlsZSBwYXltZW50cyBhdXRoX3YxX3Rva2VuIGRlbGl2ZXJpZXMgcGhvbmUgb2ZmbGluZV9hY2Nlc3MgbG9jYXRpb25zIGJvb2tpbmdzIGVtYWlsIiwiaXNzIjoiaHR0cHM6XC9cL2lkZW50aXR5LmNhcmVlbS5jb21cLyIsImV4cCI6MTYzNTY1NDEwNCwiaWF0IjoxNjM1NTY3NzA0LCJqdGkiOiJiNTA4MDQ5MS0zNmMwLTQyNGItOGU5MC1lYjY3ZTgxMWVlMjMifQ.LMgdDO3mvAWSCuqqJLE6JLnIv7QtXkqEkfnSFI0zYv8OD3wDlLypCZPhA321zB03PkLbYew1kKZZXZq5fo0qRYuZNQfo6Ooac_h5LhGM2LT8PH9vGGPk7Iyv45zXYb9b2xSCdUF9C3G1om71jL6bUjvAYE1INqvnsofG0UcapBi3cJbZUyMDWRRxk459cXEBeF7aZkvYcsZMFe9j_aIuLL_zjCid68OV8TSfPyE-lVRLZx9FIeIgOACXqdXI4qF2pYalt2zokqWKOKaGcALxHptozys6qoqxgO2kFr9Qv4ixNDNG8K0BvotA3oF5uIk-Hc3kB9kw7tmh2ezEWdnMig" --header "city-id: 1" --header "device: FF46DFC1-6498-40AE-8663-AB810CC52910" --header "lat: 25.196929931640625" --header "lng: 55.274391174316406" --header "meta: ios;production;14.31.0 (1);15.1;iPhone14,2" --header "time-zone: Asia/Dubai" --user-agent "ICMA/11.42.1" --header "uuid: 08D6B5B6-DE91-40EB-8164-EF905428F061" --header "version: 11.42.1" --header "x-careem-agent: ICMA" --header "x-careem-beta: false" --header "x-careem-version: 11.42.1" --header "x-careemdomain: food" --header "x-request-source: SUPERAPP" "https://apigateway.careemdash.com//v1/restaurants/2828?offers_category=0" 
+```
+  ## Response
+  [Click here to see response](https://github.com/DumbMachine/anakin-test/blob/master/menu.2.json)
+</details>
